@@ -4,7 +4,6 @@ on:
   push:
     branches:
     - main
-    - 4.x
 
     tags:
     - '*'
@@ -12,6 +11,7 @@ on:
   pull_request:
 
 env:
+  BASE_IMAGE_STABILITY_TAG: 4.55.6  
   DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
   DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
 
@@ -28,5 +28,5 @@ jobs:
         with:
           version: '1.0.1'
           php_ver: '8.3'
-          tags: 1-8.3,1-8,1,latest
+          tags: 1,1.0,latest
           platform: linux/amd64,linux/arm64  

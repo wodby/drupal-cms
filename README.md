@@ -16,9 +16,9 @@ Overview:
 - [GitHub actions builds](https://github.com/wodby/drupal-cms/actions)
 - [Docker Hub](https://hub.docker.com/r/wodby/drupal-cms)
 
-| Supported tags and respective `Dockerfile` links                                                         | Drupal CMS | PHP |
-|----------------------------------------------------------------------------------------------------------|------------|-----|
-| `1-8.3`, `1-8`, `1`, `latest` [_(Dockerfile)_](https://github.com/wodby/drupal-cms/tree/main/Dockerfile) | 1          | 8.3 |
+| Supported tags and respective `Dockerfile` links                                                | Drupal CMS | PHP |
+|-------------------------------------------------------------------------------------------------|------------|-----|
+| `1`, `1.0`, `latest` [_(Dockerfile)_](https://github.com/wodby/drupal-cms/tree/main/Dockerfile) | 1.0        | 8.3 |
 
 All images built for `linux/amd64` and `linux/arm64`
 
