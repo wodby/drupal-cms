@@ -2,7 +2,7 @@
 
 set -e
 
-if [[ "${GITHUB_REF}" == refs/heads/master || "${GITHUB_REF}" == refs/tags/* ]]; then
+if [[ "${GITHUB_REF}" == refs/heads/main || "${GITHUB_REF}" == refs/tags/* ]]; then
     docker login -u "${DOCKER_USERNAME}" -p "${DOCKER_PASSWORD}"
 
     if [[ "${GITHUB_REF}" == refs/tags/* ]]; then
