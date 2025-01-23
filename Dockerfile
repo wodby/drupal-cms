@@ -23,9 +23,6 @@ RUN set -ex; \
     mkdir -p web/sites/default/files; \
     chmod 777 web/sites/default/files; \
     chown wodby:wodby web/sites/default/settings.php web/sites/default/files; \
-    su-exec wodby composer require drush/drush; \
-    # @todo install console, currently in conflict https://github.com/hechoendrupal/drupal-console/issues/4220
-    #su-exec wodby composer require --dev drupal/console:@stable; \
     \
     if [[ -z "${PHP_DEV}" ]]; then \
         echo "$(cat /etc/sudoers.d/wodby), /usr/local/bin/init" > /etc/sudoers.d/wodby; \
