@@ -19,7 +19,7 @@ jobs:
   drupal-cms:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - uses: docker/setup-qemu-action@v3
         with:
           platforms: amd64,arm64
@@ -27,6 +27,6 @@ jobs:
       - uses: ./.github/actions
         with:
           version: '1.2.8'
-          php_ver: '8.3'
+          php_ver: '8.4'
           tags: 1,1.2,latest
           platform: linux/amd64,linux/arm64  
