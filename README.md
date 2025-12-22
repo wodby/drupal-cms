@@ -11,7 +11,7 @@ to [git tags](https://github.com/wodby/drupal-cms/releases). We strongly recomme
 
 Overview:
 
-- All images based on Alpine Linux
+- All images are based on Alpine Linux
 - Base image: [wodby/drupal-php](https://github.com/wodby/drupal-php)
 - [GitHub actions builds](https://github.com/wodby/drupal-cms/actions)
 - [Docker Hub](https://hub.docker.com/r/wodby/drupal-cms)
