@@ -6,7 +6,7 @@
 
 ## Docker Images
 
-❗For better reliability we release images with stability tags (`wodby/drupal-cms:1-X.X.X`) which correspond
+❗For better reliability we release images with stability tags (`wodby/drupal-cms:2-X.X.X`) which correspond
 to [git tags](https://github.com/wodby/drupal-cms/releases). We strongly recommend using images only with stability tags.
 
 Overview:
@@ -18,7 +18,7 @@ Overview:
 
 | Supported tags and respective `Dockerfile` links                                                | Drupal CMS | PHP |
 |-------------------------------------------------------------------------------------------------|------------|-----|
-| `1`, `1.2`, `latest` [_(Dockerfile)_](https://github.com/wodby/drupal-cms/tree/main/Dockerfile) | 1.2.8      | 8.4 |
+| `2`, `2.1`, `latest` [_(Dockerfile)_](https://github.com/wodby/drupal-cms/tree/main/Dockerfile) | 2.1.0      | 8.4 |
 
 All images built for `linux/amd64` and `linux/arm64`
 
