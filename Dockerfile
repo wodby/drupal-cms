@@ -16,7 +16,7 @@ RUN set -ex; \
     mkdir -p /usr/src/drupal; \
     chown wodby:wodby -R /usr/src; \
     \
-    COMPOSER_MEMORY_LIMIT=-1 su-exec wodby composer create-project "drupal/cms:${DRUPAL_CMS_VER}" /usr/src/drupal --no-interaction; \
+    COMPOSER_POLICY_ADVISORIES_BLOCK=0 COMPOSER_MEMORY_LIMIT=-1 su-exec wodby composer create-project "drupal/cms:${DRUPAL_CMS_VER}" /usr/src/drupal --no-interaction; \
     \
     cd /usr/src/drupal; \
     cp web/sites/default/default.settings.php web/sites/default/settings.php; \
