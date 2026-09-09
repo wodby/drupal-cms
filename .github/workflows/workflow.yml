@@ -11,7 +11,7 @@ on:
   pull_request:
 
 env:
-  BASE_IMAGE_STABILITY_TAG: 4.82.7
+  BASE_IMAGE_STABILITY_TAG: 4.82.8
 
 jobs:
   drupal-cms:
