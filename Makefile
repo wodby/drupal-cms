@@ -1,4 +1,8 @@
 DRUPAL_CMS_VER ?= 2.1.0
+
+# Accept legacy build arguments during the image revision transition.
+BASE_IMAGE_REVISION ?= $(BASE_IMAGE_STABILITY_TAG)
+IMAGE_REVISION ?= $(STABILITY_TAG)
 DRUPAL_CMS_VER_MAJOR ?= $(shell echo "${DRUPAL_CMS_VER}" | grep -oE '^[0-9]+')
 
 PHP_VER ?= 8.4
@@ -11,13 +15,15 @@ TAG ?= $(DRUPAL_CMS_VER_MAJOR)
 
 PLATFORM ?= linux/amd64
 
-ifneq ($(BASE_IMAGE_STABILITY_TAG),)
-    BASE_IMAGE_TAG := $(BASE_IMAGE_TAG)-$(BASE_IMAGE_STABILITY_TAG)
+ifneq ($(BASE_IMAGE_REVISION),)
+    BASE_IMAGE_TAG := $(BASE_IMAGE_TAG)-$(BASE_IMAGE_REVISION)
 endif
 
-ifneq ($(STABILITY_TAG),)
+ifneq ($(IMAGE_REVISION),)
     ifneq ($(TAG),latest)
-        override TAG := $(TAG)-$(STABILITY_TAG)
+        override TAG := $(TAG)-$(IMAGE_REVISION)
+    else
+        override TAG := $(IMAGE_REVISION)
     endif
 endif
 
