@@ -12,7 +12,7 @@ on:
   pull_request:
 
 env:
-  BASE_IMAGE_REVISION: 4.83.3
+  BASE_IMAGE_REVISION: r0
 
 jobs:
   drupal-cms:
