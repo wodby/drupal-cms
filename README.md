@@ -23,7 +23,7 @@ Overview:
 
 | Supported tags and respective `Dockerfile` links                                                | Drupal CMS | PHP |
 |-------------------------------------------------------------------------------------------------|------------|-----|
-| `2`, `2.1`, `latest` [_(Dockerfile)_](https://github.com/wodby/drupal-cms/tree/main/Dockerfile) | 2.1.0      | 8.4 |
+| `2`, `2.2`, `latest` [_(Dockerfile)_](https://github.com/wodby/drupal-cms/tree/main/Dockerfile) | 2.1.0      | 8.4 |
 
 All images built for `linux/amd64` and `linux/arm64`
 

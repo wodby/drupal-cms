@@ -28,10 +28,10 @@ jobs:
           DOCKER_USERNAME: ${{ github.event_name != 'pull_request' && secrets.DOCKER_USERNAME || '' }}
           DOCKER_PASSWORD: ${{ github.event_name != 'pull_request' && secrets.DOCKER_PASSWORD || '' }}
         with:
-          version: '2.1.6'
+          version: '2.2.0'
           workdir: .
           php_ver: '8.4'
-          tags: 2,2.1,latest
+          tags: 2,2.2,latest
           platform: linux/amd64,linux/arm64  
 
   image-revision-aliases:
