@@ -3,7 +3,7 @@
 BASE_IMAGE_REPOSITORY := wodby/drupal-php
 BASE_IMAGE_VERSION_SUFFIX :=
 
-BASE_IMAGE_DIGEST_8.4 := sha256:ab9556bef2e6001c1316aa627a38cdf786ba1581c23fefd1908e809c2097752f
+BASE_IMAGE_DIGEST_8.4 := sha256:d326d5aae0fb2f35a849e0ac3fdd9f95a286fa4ac901c9ddba7e5a2966c22800
 BASE_IMAGE_DIGEST_8.4-r7 := sha256:ab9556bef2e6001c1316aa627a38cdf786ba1581c23fefd1908e809c2097752f
 
 # Fail before building when a version or variant has no reviewed pin.
