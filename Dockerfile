@@ -13,6 +13,9 @@ ENV DRUPAL_CMS_VER="${DRUPAL_CMS_VER}" \
 
 USER root
 
+# Refresh inherited security fixes when rebuilding this image.
+RUN apk upgrade --no-cache
+
 RUN set -ex; \
     \
     mv /usr/local/bin/actions.mk /usr/local/bin/drupal-php.mk; \
