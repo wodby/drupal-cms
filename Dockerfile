@@ -22,6 +22,10 @@ RUN set -ex; \
     COMPOSER_POLICY_ADVISORIES_BLOCK=0 COMPOSER_MEMORY_LIMIT=-1 su-exec wodby composer create-project "drupal/cms:${DRUPAL_CMS_VER}" /usr/src/drupal --no-interaction; \
     \
     cd /usr/src/drupal; \
+    # The installer downloads the chosen site template while it installs, which needs a code base that PHP-FPM can \
+    # write to; here it belongs to wodby. Ship the two templates the installer lists first, of the same release. \
+    COMPOSER_POLICY_ADVISORIES_BLOCK=0 COMPOSER_MEMORY_LIMIT=-1 su-exec wodby composer require --no-interaction \
+        "drupal/drupal_cms_blank:${DRUPAL_CMS_VER}" "drupal/drupal_cms_starter:${DRUPAL_CMS_VER}"; \
     cp web/sites/default/default.settings.php web/sites/default/settings.php; \
     mkdir -p web/sites/default/files; \
     chmod 777 web/sites/default/files; \
