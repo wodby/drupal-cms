@@ -12,7 +12,7 @@ on:
   pull_request:
 
 env:
-  BASE_IMAGE_REVISION: r23
+  BASE_IMAGE_REVISION: r24
 
 jobs:
   drupal-cms:
